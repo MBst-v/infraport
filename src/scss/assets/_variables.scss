@@ -1,0 +1,28 @@
+$mediaQuery576: '(min-width:575.98px)';
+$mediaQuery768: '(min-width:767.98px)';
+$mediaQuery1024: '(min-width:1023.98px)';
+$mediaQuery1280: '(min-width:1279.98px)';
+
+$containerWidth320: 280px;
+$containerWidth576: 536px;
+$containerWidth768: 708px;
+$containerWidth1024: 964px;
+$containerWidth1280: 1200px;
+
+$sectionVerticalPadding320:30px;
+$sectionVerticalPadding576:0px;
+$sectionVerticalPadding768:40px;
+$sectionVerticalPadding1024:50px;
+$sectionVerticalPadding1280:65px;
+
+$sectionHorizontalPadding: 20px;
+$sectionHorizontalPadding: calc(50vw - 268px);
+$sectionHorizontalPadding: calc(50vw - 354px);
+$sectionHorizontalPadding: calc(50vw - 482px);
+$sectionHorizontalPadding: calc(50vw - 600px);
+
+$sectionHorizontalPaddingMinus: -20px;
+$sectionHorizontalPaddingMinus: calc((50vw - 268px) * -1);
+$sectionHorizontalPaddingMinus: calc((50vw - 354px) * -1);
+$sectionHorizontalPaddingMinus: calc((50vw - 482px) * -1);
+$sectionHorizontalPaddingMinus: calc((50vw - 600px) * -1);
