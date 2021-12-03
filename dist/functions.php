@@ -3,6 +3,7 @@
 $template_directory_uri = get_template_directory_uri();
 $template_directory = get_template_directory();
 $site_url = site_url();
+$images_url = $template_directory_uri . '/img/';
 
 $upload_dir = wp_get_upload_dir();
 $upload_basedir = $upload_dir['basedir'];
@@ -92,11 +93,8 @@ require $template_directory . '/inc/php-path-join.php';
 
 if ( is_super_admin() || is_admin_bar_showing() ) {
 
-	// Функция формирования стилей для страницы при сохранении страницы
-	require $template_directory . '/inc/build-styles.php';
-
-	// Функция формирования скриптов для страницы при сохранении страницы
-	require $template_directory . '/inc/build-scripts.php';
+	// Функция формирования стилей и скриптов для страницы при сохранении страницы
+	require $template_directory . '/inc/build-styles-scripts.php';
 
 	// Функция создания webp и минификации изображений
 	require $template_directory . '/inc/generate-images.php';

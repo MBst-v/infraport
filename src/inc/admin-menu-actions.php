@@ -8,6 +8,6 @@ add_action( 'admin_menu', function() {
   // remove_menu_page( 'edit.php' ); // Записи
   // remove_menu_page( 'upload.php' ); // Медиабиблиотека
   // remove_menu_page( 'edit.php?post_type=page' ); // Страницы
-  // remove_menu_page( 'edit-comments.php' ); // Комментарии 
+  remove_menu_page( 'edit-comments.php' ); // Комментарии 
   // remove_menu_page( 'link-manager.php' ); // Ссылки
 } );

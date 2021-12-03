@@ -1,15 +1,24 @@
-
 @import '../assets/colors';
 @import '../assets/mixins';
 @import '../assets/variables';
+
 .btn {
-  
+  font: 12px/1.25 $rubik;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.btn_blue {
+.btn-blue {
+  color: $white;
+  background: $accentBlue;
+}
+
+.btn-ol {
 
 }
 
-.btn_ol {
-
+@media (min-width:767.98px) {
+  .btn {
+    font-size: 15px;
+  }
 }

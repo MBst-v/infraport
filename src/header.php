@@ -3,7 +3,9 @@
     $preload,
     $site_url,
     $logo_url,
-    $template_directory_uri;
+    $template_directory_uri,
+    $images_url,
+    $webp_support,
     $current_template;
 
   if ( !$preload ) {
@@ -13,6 +15,46 @@
   if ( is_front_page() ) {
     $script_name = 'script-index';
     $style_name = 'style-index';
+
+    $first_screen_image_ending = $webp_support ? 'webp' : 'jpg';
+    $first_screen_image_type = $webp_support ? 'image/webp' : 'image/jpeg';
+    $first_screen_images = [
+      [
+        'url' => 'index-hero.1280',
+        'imagesrcset' => 'index-hero.1280@2x',
+        'media' => '(min-width:1279.98px)'
+      ],
+      [
+        'url' => 'index-hero.1024',
+        'imagesrcset' => 'index-hero.1024@2x',
+        'media' => '(min-width:1023.98px) and (max-width:1279.98px)'
+      ],
+      [
+        'url' => 'index-hero.768',
+        'imagesrcset' => 'index-hero.768@2x',
+        'media' => '(min-width:767.98px) and (max-width:1023.98px)'
+      ],
+      [
+        'url' => 'index-hero.576',
+        'imagesrcset' => 'index-hero.576@2x',
+        'media' => '(min-width:375.98px) and (max-width:767.98px)'
+      ],
+      [
+        'url' => 'index-hero.375',
+        'imagesrcset' => 'index-hero.375@2x',
+        'media' => '(max-width:375.98px)'
+      ]
+    ];
+
+    foreach ( $first_screen_images as $first_screen_image ) {
+      $preload[] = [
+        'url' => "{$images_url}{$first_screen_image['url']}.{$first_screen_image_ending}",
+        'imagesrcset' => "{$images_url}{$first_screen_image['imagesrcset']}.{$first_screen_image_ending} 2x",
+        'type' => $first_screen_image_type,
+        'media' => $first_screen_image['media']
+      ];
+    }
+
   } else {
     if ( $current_template ) {
       $script_name = 'script-' . $GLOBALS['current_template'];
@@ -43,17 +85,27 @@
   <!-- fonts preload --> <?php
 	$fonts = [
 		'Rubik-Regular.woff',
-		'Rubik.woff',
+		'Rubik-Light.woff',
 		'OpenSans-Light.woff'
 	];
 	foreach ( $fonts as $font ) : ?>
 
 	<link rel="preload" href="<?php echo $template_directory_uri . '/fonts/' . $font ?>" as="font" type="font/woff" crossorigin="anonymous" /> <?php
-	endforeach ?>
+	endforeach;
+  echo PHP_EOL ?>
   <!-- other preload --> <?php
   echo PHP_EOL;
 
-  $preload[] = $logo_url;
+  $preload[] = [
+    'url' => $logo_url,
+    'type' => 'image/svg+xml'
+  ];
+
+  $preload[] = [
+    'url' => $images_url . 'icon-burger.svg',
+    'type' => 'image/svg+xml',
+    'media' => '(max-width:1023.98px)'
+  ];
 
   if ( $preload ) {
     foreach ( $preload as $item ) {
@@ -73,13 +125,17 @@
     <!-- <noindex> -->Для полноценного использования сайта включите JavaScript в настройках вашего браузера.<!-- </noindex> -->
   </noscript>
   <div id="page-wrapper">
-  <header class="hdr container"> <?php 
-  wp_nav_menu( [
-    'theme_location'  => 'header_menu',
-    'container'       => 'nav',
-    'container_class' => 'hdr__nav',
-    'menu_class'      => 'hdr__nav-list',
-    'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
-  ] ) ?> <?php
+  <header class="hdr container">
+  <a href="<?php echo $site_url ?>" class="hdr__logo">
+    <img src="<?php echo $logo_url ?>" alt="Логотип Infraport" class="hdr__logo-img">
+  </a>
+  <button type="button" class="hdr__burger"></button> <?php 
+    wp_nav_menu( [
+      'theme_location'  => 'header_menu',
+      'container'       => 'nav',
+      'container_class' => 'hdr__nav',
+      'menu_class'      => 'hdr__nav-list',
+      'items_wrap'      => '<ul class="%2$s">%3$s</ul>'
+    ] );
     require 'template-parts/mobile-menu.php' ?>
   </header>

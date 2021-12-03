@@ -1,6 +1,7 @@
 # scripts
 .jshintrc
 *.txt
+scripts/
 
 .babelrc
 .browserslistrc

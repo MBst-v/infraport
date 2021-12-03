@@ -10,7 +10,7 @@ function build_pages_info( $pages_info_cnt ) {
     $page_name = array_keys( $pages_info_cnt )[0];
 
     if ( $exists_cnt[ $page_name ] ) {
-      $exists_cnt[ $page_name ] = $pages_info_cnt[ $page_name ];
+      $exists_cnt[ $page_name ] = $pages_info_cnt[ $page_name ]; 
     } else {
       $exists_cnt = array_merge( $exists_cnt, $pages_info_cnt );
     }
