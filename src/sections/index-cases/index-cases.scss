@@ -1,3 +1,43 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-cases {
+  &__title-block {}
+
+  &__title {}
+
+  &__arrows {
+    display: none;
+  }
+}
+
+.index-cases-list {
+  display: flex;
+  flex-flow: column;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font: 17px/1.45 $rubik;
+  >.slick-list {
+    overflow: hidden;
+  }
+  &__nav {
+    margin: 30px 0 0;
+    order: 10;
+  }
+}
+
+.index-case {
+  display: block;
+
+  &__pic {
+    display: block;
+  }
+
+  &__img {}
+
+  &__title {
+    margin: 15px 0 0;
+    display: block;
+  }
+}

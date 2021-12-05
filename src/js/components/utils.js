@@ -35,8 +35,9 @@ var browser = {
     },
     createArrow: function(className, inside) {
       className = (className.indexOf('prev') === -1 ? 'next ' : 'prev ') + className;
-      return '<button type="button" class="arrow arrow_' + className + '">' + inside + '</button>';
+      return '<button type="button" class="arrow arrow-' + className + '">' + inside + '</button>';
     },
+    arrowSvg: '<svg width="27" height="26" class="arrow__svg" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.0213 12.9998L1 13" stroke="#4774C8" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M15.0044 2.98291L25.0217 13.0003L15.0044 23.0176" stroke="#4774C8" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>',
     // setImages: function(slides) {
     //   for (let i = 0, len = slides.length; i < len; i++) {
     //     let img = q('img', slides[i]);

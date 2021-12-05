@@ -1,3 +1,21 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-cases {
+  &__title-block {}
+
+  &__title {}
+}
+
+.index-cases-list {}
+
+.index-case {
+  &__link {}
+
+  &__pic {}
+
+  &__img {}
+
+  &__title {}
+}

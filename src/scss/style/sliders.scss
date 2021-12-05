@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   > li {
+    display: flex;
     &:nth-last-child(n+2) {
       margin-right: 14px;
     }
@@ -14,16 +15,16 @@
 
 li.slick-active > .dot {
   cursor: default;
-  transform: scale(2);
-  // background: $red;
+  background: $accentBlue;
 }
 
 .dots .dot {
   width: 6px;
   height: 6px;
-  // background: $light;
-  border-radius: 50%;
-  transition: transform .35s, color .35s
+  background: $gray3;
+  // border-radius: 50%;
+  // transition: transform .35s, color .35s
+  transition: color .5s
 }
 
 .slick {
@@ -83,7 +84,7 @@ li.slick-active > .dot {
     opacity: 0.5;
     pointer-events: none;
   }
-  &_prev {
+  &-prev {
     > .arrow__svg {
       transform: rotate(180deg);
     }

@@ -1,3 +1,41 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-cases {
+  &__title-block {
+    margin: 0 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {}
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__prev {
+    margin: 0 25px 0 0;
+  }
+}
+
+.index-cases-list {
+  font-size: 16px;
+  &__nav {
+    display: none;
+  }
+}
+
+.index-case {
+  &__pic {}
+
+  &__img {}
+
+  &__title {
+    margin: 20px 0 0;
+  }
+}

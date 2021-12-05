@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../sections/index-principles/index-principles.js
 
+//=include ../sections/index-cases/index-cases.js
+
 //=include ../sections/footer/footer.js
 
 });
