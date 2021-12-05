@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //=include ../sections/index-services/index-services.js
 
+//=include ../sections/index-principles/index-principles.js
+
 //=include ../sections/footer/footer.js
 
 });

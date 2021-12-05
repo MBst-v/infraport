@@ -101,7 +101,7 @@ var browser = {
   mobileMenu,
   // Прокрутка до элемента при помощи requestAnimationFrame
   scrollToTarget = function(e, target) {
-    e.preventDefault();
+    e !== '' && e.preventDefault();
 
     if (this === window) {
       _ = e.target;
