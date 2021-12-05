@@ -1,3 +1,47 @@
 ;(function() {
-    let i = q('.i');
+  let competenciesSection = q('.index-competencies'),
+    tabsBlock = q('.index-competencies-tabs', competenciesSection),
+    contentBlock = q('.index-competencies-wrap', competenciesSection),
+    tabs = qa('.index-competencies-tab', tabsBlock),
+    blocks = qa('.index-competencies', competenciesSection),
+    animationEnd = function(e) {
+      console.log('msg');
+      this.classList.toggle('active', e.animationName === 'fadeIn');
+      this.removeEventListener('animationend', animationEnd);
+    };
+
+  tabsBlock.addEventListener('click', function(e) {
+    let target = e.target;
+    if (target.classList.contains('index-competencies-tab') && !target.classList.contains('active')) {
+      let selector = '[data-term="' + e.target.textContent + '"]',
+        targetBlock = q(selector, contentBlock),
+        // activeBlock = q('.active', contentBlock),
+        activeBlock = q('[style="display: block;"]', contentBlock),
+        activeTab = q('.active', tabsBlock);
+
+      // target.classList.add('active');
+      // activeTab.classList.remove('active');
+
+      // $(targetBlock).fadeIn(500, 'swing', function() {
+      //   targetBlock.classList.add('active');
+      // });
+      // $(activeBlock).fadeOut(500, 'swing', function() {
+      //   activeBlock.classList.remove('active');
+      // });
+      // targetBlock.classList.add('active');
+      // activeBlock.classList.remove('active');
+
+      // targetBlock.classList.add('active');
+      // activeBlock.classList.remove('active');
+
+      console.log(activeBlock);
+      console.log(targetBlock);
+      console.log(selector);
+      // let target = e.target;
+      // console.log(target);
+      // if (target.classList.contains('index-competencies-tab'))
+    }
+  });
+  
+
 })();

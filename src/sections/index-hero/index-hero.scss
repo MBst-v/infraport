@@ -3,13 +3,37 @@
 @import '../../scss/assets/variables';
 
 .index-hero {
-  &__pic {}
+  margin-bottom: $sectionVerticalPadding320;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  position: relative;
 
-  &__img {}
+  $hdr_height: 80.25px;
 
-  &__title {}
+  &__pic {
+    position: absolute;
+    top: -$hdr_height;
+    left: 0;
+    z-index: -1;
+    height: calc(100% + #{$hdr_height});
+  }
 
-  &__descr {}
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-  &__btn {}
+  &__title {
+
+  }
+
+  &__descr {
+    margin: 18px 0 195px;
+  }
+
+  &__btn {
+    max-width: 100%;
+    padding: 16px 82px;
+  }
 }

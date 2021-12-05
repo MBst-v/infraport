@@ -800,9 +800,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   fakeScrollbar = id('fake-scrollbar');
 
-  // burger = q('.hdr__burger');
+  burger = q('.hdr__burger');
 
-  // hdr = q('.hdr');
+  hdr = q('.hdr');
 
   // menu = mobileMenu({
   //   menu: q('.menu'),

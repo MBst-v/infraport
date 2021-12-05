@@ -9,11 +9,11 @@ $upload_dir = wp_get_upload_dir();
 $upload_basedir = $upload_dir['basedir'];
 $upload_baseurl = $upload_dir['baseurl'] . DIRECTORY_SEPARATOR;
 
-// $address = get_option( 'contacts_address' );
-// $tel = get_option( 'contacts_tel' );
-// $tel_clean = preg_replace( '/\s/', '', $tel );
-// $email = get_option( 'contacts_email' );
-// $insta = get_option( 'contacts_insta' );
+$address = get_option( 'contacts_address' );
+$address_link = get_option( 'contacts_address_link' );
+$tel = get_option( 'contacts_tel' );
+$tel_clean = preg_replace( '/\s/', '', $tel );
+$email = get_option( 'contacts_email' );
 
 $logo_id = get_theme_mod( 'custom_logo' );
 $logo_url = wp_get_attachment_url( $logo_id );

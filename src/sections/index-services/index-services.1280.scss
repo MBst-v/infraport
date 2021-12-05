@@ -1,3 +1,15 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-services {
+  &__title {}
+}
+
+.index-services-list {
+  &__item {
+    &::before {
+      margin: 0 60px 0 0;
+    }
+  }
+}

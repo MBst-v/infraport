@@ -1,3 +1,37 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-competencies {
+  &__title {}
+
+  &__descr {}
+}
+
+.index-competencies {
+  &.active {}
+
+  &-tabs {}
+
+  &-tab {
+    &:first-child {}
+
+    &:last-child {}
+
+    &.active {}
+  }
+}
+
+.index-competencies-wrap {}
+
+.index-competence {
+  &__title {}
+
+  &__descr {}
+
+  &__arrow {}
+}
+
+.sect-left {}
+
+.sect-right {}

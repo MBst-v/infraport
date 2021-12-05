@@ -1,3 +1,65 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.ftr {
+  text-align: center;
+  > .sect-left {
+    padding: 40px 20px 30px;
+    background: $accentBlue;
+    color: $gray1;
+    font: 300 12px/1.4 $openSans;
+  }
+  > .sect-right {
+    padding: 40px 20px 60px;
+    background: $gray2;
+  }
+  &__logo {}
+
+  &__logo-img {
+    width: 185px;
+    height: 25px;
+    object-fit: contain;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+  }
+
+  &__descr {
+    margin: 20px 0 30px;
+  }
+
+  &__copy {
+    font-size: 10px;
+  }
+
+  &__contacts {}
+
+  &__contact {
+    display: flex;
+    flex-flow: column;
+    &:not(:last-child) {
+      margin: 0 0 25px;
+    }
+  }
+
+  &__contact-title {
+    margin: 0 0 15px 0;
+    color: $accentBlue;
+  }
+
+  &__contact-link {}
+
+  &__nav {
+    margin: 40px 0 0 0;
+    padding: 10px 0 0;
+    font: 12px/1 $rubik;
+    text-transform: uppercase;
+    border-top: 1px solid $gray3;
+  }
+
+  &__nav-list {
+  }
+
+  &__nav-li {
+    margin: 30px 0 0;
+  }
+}

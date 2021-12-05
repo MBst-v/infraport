@@ -15,17 +15,17 @@ $sectionVerticalPadding768:40px;
 $sectionVerticalPadding1024:50px;
 $sectionVerticalPadding1280:65px;
 
-$sectionHorizontalPadding: 20px;
-$sectionHorizontalPadding: calc(50vw - 268px);
-$sectionHorizontalPadding: calc(50vw - 354px);
-$sectionHorizontalPadding: calc(50vw - 482px);
-$sectionHorizontalPadding: calc(50vw - 600px);
+$sectionHorizontalPadding320: 20px;
+$sectionHorizontalPadding576: calc(50vw - 268px);
+$sectionHorizontalPadding768: calc(50vw - 354px);
+$sectionHorizontalPadding1024: calc(50vw - 482px);
+$sectionHorizontalPadding1280: calc(50vw - 600px);
 
-$sectionHorizontalPaddingMinus: -20px;
-$sectionHorizontalPaddingMinus: calc((50vw - 268px) * -1);
-$sectionHorizontalPaddingMinus: calc((50vw - 354px) * -1);
-$sectionHorizontalPaddingMinus: calc((50vw - 482px) * -1);
-$sectionHorizontalPaddingMinus: calc((50vw - 600px) * -1);
+$sectionHorizontalPaddingMinus320: -20px;
+$sectionHorizontalPaddingMinus576: calc((50vw - 268px) * -1);
+$sectionHorizontalPaddingMinus768: calc((50vw - 354px) * -1);
+$sectionHorizontalPaddingMinus1024: calc((50vw - 482px) * -1);
+$sectionHorizontalPaddingMinus1280: calc((50vw - 600px) * -1);
 
 $rubik: Rubik, sans-serif;
 $openSans: OpenSans, sans-serif;

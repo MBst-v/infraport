@@ -1,3 +1,56 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.ftr {
+  font-size: 16px;
+
+  >.sect-left {
+    padding: 60px 70px 55px $sectionHorizontalPadding1024;
+    width: responsive('1024->1279', '365->510');
+    font-size: 16px;
+  }
+
+  >.sect-right {
+    padding: 60px $sectionHorizontalPadding1024 55px 55px;
+    display: flex;
+  }
+
+  &__logo {}
+
+  &__logo-img {
+    width: 185px;
+    height: 25px;
+  }
+
+  &__descr {}
+
+  &__copy {}
+
+  &__contacts {
+    max-width: 270px;
+    flex-flow: column;
+  }
+
+  &__contact {}
+
+  &__contact-title {}
+
+  &__contact-link {}
+
+  &__nav {
+    margin: -30px 70px 0 auto;
+    padding: 0;
+    border: 0;
+    font-size: 15px;
+  }
+
+  &__nav-list {
+    flex-flow: column;
+  }
+
+  &__nav-li {
+    margin: 30px 0 0;
+    width: auto;
+  }
+}

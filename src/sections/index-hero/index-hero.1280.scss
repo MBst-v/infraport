@@ -3,13 +3,16 @@
 @import '../../scss/assets/variables';
 
 .index-hero {
+  margin-bottom: $sectionVerticalPadding1280;
   &__pic {}
 
   &__img {}
 
   &__title {}
 
-  &__descr {}
+  &__descr {
+    font-size: 16px;
+  }
 
   &__btn {}
 }

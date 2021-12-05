@@ -85,8 +85,10 @@
   <!-- fonts preload --> <?php
 	$fonts = [
 		'Rubik-Regular.woff',
-		'Rubik-Light.woff',
-		'OpenSans-Light.woff'
+		// 'Rubik-Light.woff',
+    'Rubik-Medium.woff',
+    'OpenSans-Regular.woff'
+		// 'OpenSans-Light.woff'
 	];
 	foreach ( $fonts as $font ) : ?>
 
@@ -126,10 +128,10 @@
   </noscript>
   <div id="page-wrapper">
   <header class="hdr container">
-  <a href="<?php echo $site_url ?>" class="hdr__logo">
-    <img src="<?php echo $logo_url ?>" alt="Логотип Infraport" class="hdr__logo-img">
-  </a>
-  <button type="button" class="hdr__burger"></button> <?php 
+    <a href="<?php echo $site_url ?>" class="hdr__logo">
+      <img src="<?php echo $logo_url ?>" alt="Логотип Infraport" class="hdr__logo-img">
+    </a>
+    <button type="button" class="hdr__burger"></button> <?php 
     wp_nav_menu( [
       'theme_location'  => 'header_menu',
       'container'       => 'nav',

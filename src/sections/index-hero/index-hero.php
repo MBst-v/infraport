@@ -1,4 +1,4 @@
-<section class="index-hero"<?php echo $sect_id ?>>
+<section class="index-hero container"<?php echo $sect_id ?>>
   <picture class="index-hero__pic">
     <source type="image/webp" srcset="<?php echo $images_url ?>index-hero.1280.webp, <?php echo $images_url ?>index-hero.1280@2x.webp 2x" media="(min-width:1279.98px)">
     <source type="image/jpeg" srcset="<?php echo $images_url ?>index-hero.1280.jpg, <?php echo $images_url ?>index-hero.1280@2x.jpg 2x" media="(min-width:1279.98px)">
@@ -12,7 +12,7 @@
     <source type="image/webp" srcset="<?php echo $images_url ?>index-hero.375.jpg, <?php echo $images_url ?>index-hero.375@2x.jpg 2x">
     <img src="<?php echo $images_url ?>index-hero.375@2x.jpg" alt="infraport" class="index-hero__img">
   </picture>
-  <h1 class="index-hero__title"><?php echo $section['title'] ?></h1>
+  <h1 class="index-hero__title sect-title-1"><?php echo $section['title'] ?></h1>
   <p class="index-hero__descr"><?php echo $section['descr'] ?></p>
   <button type="button" class="index-hero__btn btn btn-blue" data-scroll-target="#">Заказать расчет</button>
 </section>

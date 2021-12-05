@@ -1,3 +1,15 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-about {
+  &.lazyloaded {
+    background-position: top right;
+  }
+
+  &__sect-title {}
+
+  &__title {}
+
+  &__descr {}
+}

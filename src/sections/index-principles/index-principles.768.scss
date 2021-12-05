@@ -1,3 +1,22 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-principles {
+  &__title {}
+}
+
+.index-principles-list {
+  margin: -47px 0 0;
+  &__item {
+    margin-top: 45px;
+  }
+
+  &__item-title {
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    font-size: 20px;
+  }
+
+  &__item-descr {}
+}

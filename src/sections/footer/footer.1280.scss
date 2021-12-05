@@ -1,3 +1,39 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.ftr {
+
+   >.sect-left {
+    padding: 60px 150px 55px $sectionHorizontalPadding1280;
+    width: responsive('1280->2560', '460->1165');
+  }
+
+  >.sect-right {
+    padding: 60px $sectionHorizontalPadding1280 55px 105px;
+  }
+
+  &__logo {}
+
+  &__logo-img {}
+
+  &__descr {}
+
+  &__copy {}
+
+  &__contacts {}
+
+  &__contact {}
+
+  &__contact-title {}
+
+  &__contact-link {}
+
+  &__nav {
+    margin-right: 95px;
+  }
+
+  &__nav-list {}
+
+  &__nav-li {}
+}

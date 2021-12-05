@@ -1,3 +1,13 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-about {
+  &.lazyloaded {}
+
+  &__sect-title {}
+
+  &__title {}
+
+  &__descr {}
+}

@@ -1,3 +1,27 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-services {
+  &__title {}
+}
+
+.index-services-list {
+  counter-reset: servicesList;
+
+  &__item {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $gray3;
+    &:last-child {
+      border-bottom: 1px solid $gray3;
+    }
+    &::before {
+      margin: 0 30px 0 0;
+      counter-increment: servicesList;
+      content: '0'counter(servicesList)'/';
+      color: $accentBlue;
+    }
+  }
+}

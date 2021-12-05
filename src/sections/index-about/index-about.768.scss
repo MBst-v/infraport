@@ -1,3 +1,23 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-about {
+  &.lazyloaded {
+    background-image: url('../img/index-about-bg.svg');
+    background-repeat: no-repeat;
+    background-position: top right -110px;
+    background-size: 50%;
+  }
+
+  &__sect-title {}
+
+  &__title {
+    margin: -5px 0 0;
+    display: block;
+  }
+
+  &__descr {
+    margin: 25px 0 0;
+  }
+}
