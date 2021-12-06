@@ -1,3 +1,84 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-callback {
+  >.sect-left {}
+
+  >.sect-right {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+  }
+
+  &__form-title {
+    margin: 0;
+    max-width: 380px;
+    >.text-blue {}
+  }
+
+  &__form-descr {
+    margin: 0 0 0 auto;
+    max-width: 220px;
+  }
+}
+
+.index-callback-form {
+  margin: 40px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .field {
+    margin: 0 0 30px;
+    width: calc((100% - 30px) / 2);
+    &__text {}
+
+    &__inp {}
+
+    &__textarea {
+    }
+  }
+
+  .field-name {}
+
+  .field-tel {}
+
+  .field-company {}
+
+  .field-email {}
+
+  .field-msg {
+    width: 100%;
+  }
+
+  .files-upload-block {
+    width: 100%;
+  }
+
+  .fileupload {
+    &__inp {}
+
+    &__label {}
+
+    &__text {}
+  }
+
+  .form-bottom {}
+
+  .check {
+    &__inp {}
+
+    &__text {}
+
+    &__link {}
+  }
+
+  .btn {
+    margin: 0 0 0 auto;
+    padding: 16px 32px;
+    width: auto;
+  }
+
+}

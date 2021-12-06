@@ -1,12 +1,12 @@
 <?php
 
 $image_sizes = [
-  'desktop' => 1200,
-  'laptop' => 980,
-  'tablet' => 740,
-  'mobile' => 576,
+  // 'desktop' => 1200,
+  // 'laptop' => 980,
+  // 'tablet' => 740,
+  // 'mobile' => 576,
   // 'author_articles' => [300, 400],
-  'thumb' => 400,
+  // 'thumb' => 400,
 ];
 
 foreach ( $image_sizes as $size_name => $width ) {
@@ -94,6 +94,8 @@ function minify_img( $src, $dest = null, $quality = 90 ) {
   if ( $is_jpg ) {
     imagejpeg( $image, $dest, $quality );
   } else if ( $is_png ) {
+    $quality = 10 - ( $quality / 10 );
+    imagesavealpha( $image, true );
     imagepng( $image, $dest, $quality );
   }
 

@@ -1,3 +1,25 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-partners {
+  &__title-block {}
+
+  &__title {}
+
+  &__arrows {}
+}
+
+.index-partners-list {
+  &__pagination {
+    > .pagiation-number {}
+  }
+}
+
+.index-partner {
+  padding: 30px 50px;
+  height: 100px;
+  &__pic {}
+
+  &__img {}
+}

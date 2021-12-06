@@ -1,3 +1,47 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-partners {
+  &__title-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {}
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+  }
+
+  &__prev {
+    margin: 0 25px 0 0;
+  }
+}
+
+.index-partners-list {
+  margin: 50px 0 0;
+  >.slick-list {
+    overflow: hidden;
+  }
+
+  &__pagination {
+    display: none;
+
+    >.pagiation-number {}
+  }
+}
+
+.index-partner {
+  margin: 0;
+  display: flex !important;
+  &:not(:last-child) {
+    margin: 0 20px 0 0;
+  }
+
+  &__pic {}
+
+  &__img {}
+}

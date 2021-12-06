@@ -11,6 +11,29 @@ body.no-scroll {
   }
 }
 
+.text-blue {
+  color: $accentBlue;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  font: 15px/1 $rubik;
+  letter-spacing: 0.03em;
+  color: $accentBlue;
+  &-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid transparent;
+    &.active {
+      border-color: currentColor;
+    }
+  }
+}
+
 // Обертка для всего контента
 // фиксит горизонтальную прокрутку на некоторых iOS
 #page-wrapper {

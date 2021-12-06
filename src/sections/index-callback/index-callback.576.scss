@@ -1,3 +1,60 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-callback {
+  >.sect-left {}
+
+  >.sect-right {}
+
+  &__title {}
+
+  &__form-title {
+    >.text-blue {}
+  }
+
+  &__form-descr {}
+}
+
+.index-callback-form {
+  .field {
+    &__text {}
+
+    &__inp {}
+
+    &__textarea {}
+  }
+
+  .field-name {}
+
+  .field-tel {}
+
+  .field-company {}
+
+  .field-email {}
+
+  .field-msg {}
+
+  .files-upload-block {}
+
+  .fileupload {
+    &__inp {}
+
+    &__label {}
+
+    &__text {}
+  }
+
+  .form-bottom {}
+
+  .check {
+    &__inp {}
+
+    &__text {}
+
+    &__link {}
+  }
+
+  .btn {}
+
+}

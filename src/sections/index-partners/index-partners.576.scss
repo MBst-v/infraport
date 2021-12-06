@@ -1,3 +1,23 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.index-partners {
+  &__title-block {}
+
+  &__title {}
+
+  &__arrows {}
+}
+
+.index-partners-list {
+  &__pagination {
+    > .pagiation-number {}
+  }
+}
+
+.index-partner {
+  &__pic {}
+
+  &__img {}
+}
