@@ -9,10 +9,10 @@
     } else {
       $partners = get_posts( [
         'post_type' => 'partner',
-        'numberposts' => $section['numberposts']
+        'numberposts' => $section['numberposts'],
+        'order' => 'ASC'
       ] );
     }
-    $partners = array_merge( $partners, $partners, $partners, $partners );
     $partners_on_page = 4;
     $k = 1;
     foreach ( $partners as $partner ) :

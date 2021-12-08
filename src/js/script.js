@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   body = document.body;
 
   //=include components/telMask.js
-  
+
   //=include components/validateForms.js
 
   //=include components/menu.js
@@ -24,6 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   hdr = q('.hdr');
 
+  let scrollToTargetButtons = qa('[data-scroll-target]');
+
+  scrollToTargetButtons.forEach(btn => btn.addEventListener('click', function() {
+    scrollToTarget('', btn.getAttribute('data-scroll-target'));
+  }));
+
+
+
   // menu = mobileMenu({
   //   menu: q('.menu'),
   //   menuCnt: q('.menu__cnt'),
@@ -34,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
   //   allowPageScroll: false
   // });
 
-  // let navLinks = qa('.nav-link, .hdr__callback');
+  let navLinks = qa('.nav-link', hdr, '.footer .nav-link');
 
-  // for (let i = 0, len = navLinks.length; i < len; i++) {
-  // navLinks[i].addEventListener('click', scrollToTarget);
-  // }
+  for (let i = 0, len = navLinks.length; i < len; i++) {
+    navLinks[i].addEventListener('click', scrollToTarget);
+  }
 
   // sticky(hdr);
 

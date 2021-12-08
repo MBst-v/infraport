@@ -14,5 +14,5 @@
   </picture>
   <h1 class="index-hero__title sect-title-1"><?php echo $section['title'] ?></h1>
   <p class="index-hero__descr"><?php echo $section['descr'] ?></p>
-  <button type="button" class="index-hero__btn btn btn-blue" data-scroll-target="#">Заказать расчет</button>
+  <button type="button" class="index-hero__btn btn btn-blue" data-scroll-target="#callback-sect">Заказать расчет</button>
 </section>

@@ -46,7 +46,12 @@
     color: $accentBlue;
   }
 
-  &__contact-link {}
+  &__contact-link {
+    transition: color .5s;
+    &:hover {
+      color: $accentBlue;
+    }
+  }
 
   &__nav {
     margin: 40px 0 0 0;
@@ -61,5 +66,11 @@
 
   &__nav-li {
     margin: 30px 0 0;
+    >.nav-link {
+      transition: color .5s;
+      &:hover {
+        color: $accentBlue;
+      }
+    }
   }
 }

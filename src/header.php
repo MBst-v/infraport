@@ -1,6 +1,9 @@
 <?php
   global
     $preload,
+    $email,
+    $tel,
+    $tel_clean,
     $site_url,
     $logo_url,
     $template_directory_uri,

@@ -2,7 +2,7 @@
 (function() {
   // Массив форм, на которые будет добавлена валидация
   let $forms = [
-    id('contacts-form')
+    id('index-callback-form')
   ];
 
   let formValidator = function(params) {
@@ -167,6 +167,11 @@
       },
       submitHandler = function(event) {
         let $form = q('#' + event.detail.id + '>form'),
+          parentSection = $form.closest('section'),
+          thanksBlock = q('.thanks', parentSection),
+          errorBlock = q('.error', parentSection),
+          formTitle = q('[class*="form-title"]', parentSection),
+          formDescr = q('[class*="form-descr"]', parentSection),
           eventType = event.type;
 
         if (eventType === 'wpcf7mailsent') {
@@ -177,6 +182,8 @@
             $formElements[i].classList.remove('filled');
           }
 
+          thanksBlock.classList.add('active');
+
           $form.reset();
           if ($uploadFilesBlock) {
             $uploadFilesBlock.innerHTML = '';
@@ -185,22 +192,18 @@
           //   id('quiz').resetQuiz();
           // }
           console.log('отправлено');
+        } else if (eventType === 'wpcf7mailfailed') {
+          console.log('отправка не удалась');
+          errorBlock.classList.add('active');
         }
-        /* else if (eventType === 'wpcf7mailfailed') {
-                console.log('отправка не удалась');
-              }*/
+
+        [$form, formTitle, formDescr].forEach(el => el && el.classList.add('hide'));
 
         $form.classList.remove('loading');
 
-        setTimeout(function(){
+        setTimeout(function() {
           $form.classList.remove('sent');
         }, 3000);
-
-        // thanksPopup.openPopup();
-        // thanksPopupTimer = setTimeout(function() {
-        //   thanksPopup.closePopup();
-        // }, 3000);
-
 
       },
       toggleInputsClass = function() {

@@ -6,11 +6,15 @@
   font: 12px/1.25 $rubik;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  transition: background .5s;
 }
 
 .btn-blue {
   color: $white;
   background: $accentBlue;
+  &:hover {
+    background: #6089D4;
+  }
 }
 
 .btn-ol {

@@ -17,9 +17,15 @@
 }
 
 .index-partner {
-  padding: 30px 50px;
+  padding: 20px 30px;
   height: 100px;
-  &__pic {}
+  &__pic {
+    width: auto;
+    height: auto;
+  }
 
-  &__img {}
+  &__img {
+    width: auto;
+    height: auto;
+  }
 }

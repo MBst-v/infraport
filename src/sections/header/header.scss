@@ -3,11 +3,22 @@
 @import '../../scss/assets/variables';
 
 
+#wpadminbar {
+  display: none !important;
+}
+
+html[lang] {
+  margin-top: 0 !important;
+}
+
 .hdr {
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
   align-items: center;
+  &.fixed {
+    display: none;
+  }
 
   &__logo {}
 
@@ -30,5 +41,12 @@
 
   &__nav-list {}
 
-  &__nav-li {}
+  &__nav-li {
+    >.nav-link {
+      transition: color .5s;
+      &:hover {
+        color: $accentBlue;
+      }
+    }
+  }
 }

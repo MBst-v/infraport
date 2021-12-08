@@ -8,7 +8,13 @@
   &__title {}
 }
 
-.index-cases-list {}
+.index-cases-list {
+  overflow: hidden;
+  >.slick-list {
+    // margin: 0 -20px 0 0;
+    width: calc(100% + 20px);
+  }
+}
 
 .index-case {
   &:not(:last-child) {

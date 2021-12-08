@@ -11,8 +11,94 @@ body.no-scroll {
   }
 }
 
+form {
+  transition: opacity .5s;
+
+  &.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
 .text-blue {
   color: $accentBlue;
+}
+
+.text-red {
+  color: $red;
+}
+
+.thanks {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+
+    >.text-blue {
+      display: block;
+    }
+
+    >.text-red {
+      display: block;
+    }
+  }
+
+  &__descr {}
+}
+
+.error {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+
+    >.text-blue {
+      display: block;
+    }
+
+    >.text-red {
+      display: block;
+    }
+  }
+
+  &__descr {}
+}
+
+.icon-cross {
+  width: 10px;
+  height: 10px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 12px;
+    width: 1px;
+    pointer-events: none;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .pagination {
@@ -21,6 +107,7 @@ body.no-scroll {
   font: 15px/1 $rubik;
   letter-spacing: 0.03em;
   color: $accentBlue;
+
   &-number {
     display: flex;
     align-items: center;
@@ -28,6 +115,7 @@ body.no-scroll {
     width: 45px;
     height: 45px;
     border: 1px solid transparent;
+
     &.active {
       border-color: currentColor;
     }
@@ -147,7 +235,7 @@ span.wpcf7-not-valid-tip,
 }
 
 body {
-  font: 14px/1.35 $openSans;
+  font: 14px/1.4 $openSans;
   color: $black;
 }
 
@@ -155,6 +243,10 @@ body {
 .sect {
   margin-top: $sectionVerticalPadding320;
   margin-bottom: $sectionVerticalPadding320;
+
+  +.ftr {
+    margin-top: $sectionVerticalPadding320;
+  }
 
   .sect-title-text {
     background: $white;
@@ -236,10 +328,25 @@ body {
     line-height: 1.4;
   }
 
+
+  .pagination {
+
+    &-number {
+      width: 50px;
+      height: 50px;
+
+      &.active {}
+    }
+  }
+
   // Общие стили для секций
   .sect {
     margin-top: $sectionVerticalPadding768;
     margin-bottom: $sectionVerticalPadding768;
+
+    +.ftr {
+      margin-top: $sectionVerticalPadding768;
+    }
 
     &-bg {
       margin-top: $sectionVerticalPadding768;
@@ -283,11 +390,12 @@ body {
     &-title-5 {
       margin: 0;
       font-size: 16px;
+
       &::after {
         display: none;
       }
-      >.sect-title-text {
-      }
+
+      >.sect-title-text {}
     }
 
 
@@ -301,6 +409,10 @@ body {
   .sect {
     margin-top: $sectionVerticalPadding1024;
     margin-bottom: $sectionVerticalPadding1024;
+
+    +.ftr {
+      margin-top: $sectionVerticalPadding1024;
+    }
 
     &-bg {
       margin-top: $sectionVerticalPadding1024;
@@ -334,6 +446,10 @@ body {
   .sect {
     margin-top: $sectionVerticalPadding1280;
     margin-bottom: $sectionVerticalPadding1280;
+
+    +.ftr {
+      margin-top: $sectionVerticalPadding1280;
+    }
 
     &-bg {
       margin-top: $sectionVerticalPadding1280;

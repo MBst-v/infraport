@@ -1,3 +1,49 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.menu {
+
+  &.active {}
+
+  &__cnt {}
+
+  &__hdr {
+    padding: 35px 0;
+    margin: 0 0 125px;
+  }
+
+  &__logo {}
+
+  &__logo-img {
+    width: 184px;
+    height: 25px;
+  }
+
+  &__nav {
+    &-list {
+      font-size: 40px;
+    }
+
+    &-li {
+      margin: 0 0 45px;
+    }
+  }
+
+  &__close {
+
+    &::after,
+    &::before {}
+  }
+
+  &__contacts {
+    padding: 45px 0 0;
+    flex-flow: row;
+    font-size: 18px;
+  }
+
+  &__contact-link {
+    margin: 0 65px 0 0;
+  }
+
+}

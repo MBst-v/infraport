@@ -1,1 +1,1 @@
-@charset "UTF-8";.index-case:not(:last-child){margin:0 20px 0 0}
+@charset "UTF-8";.index-cases-list{overflow:hidden}.index-cases-list>.slick-list{width:calc(100% + 20px)}.index-case:not(:last-child){margin:0 20px 0 0}

@@ -32,12 +32,16 @@
 .index-competencies-wrap {}
 
 .index-competence {
-  padding: 40px 30px;
+  padding: 40px 30px 20px;
+  height: 335px;
   &__title {}
 
   &__descr {}
 
-  &__arrow {}
+  &__arrow {
+    height: 40px;
+    height: 40px;
+  }
 }
 
 .sect-left {}

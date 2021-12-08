@@ -15,7 +15,7 @@ mobileMenu = function(_) {
         }
       }
     },
-    checkForString = function(variable) {
+    checkString = function(variable) {
       return variable.constructor === String ? q(variable) : variable;
     },
     openMenu = function() {
@@ -38,10 +38,15 @@ mobileMenu = function(_) {
       }
     },
     closeMenu = function(e, forSwipe) {
+      console.log('closeMenu');
       if (opened) {
+        // console.log(menu);
+        // menu.addEventListener('transitionend', transitionEnd);
+        // console.log('opened');
         let target = e && e.target;
         // Если меню открыто и произошел свайп или нет события (закрыто вызовом функции close()) или есть евент и его св-ва
         if (forSwipe || !e || (e.type === 'keyup' && e.keyCode === 27 || target === menu || target === closeBtn)) {
+          console.log('CLOSE');
           menu.classList.remove('active');
           openBtn.classList.remove('active');
 
@@ -123,16 +128,18 @@ mobileMenu = function(_) {
 
     },
     transitionEnd = function(e) {
-      if (fade) {
-        if (e.propertyName === 'opacity') {
-          transitionEndEvents();
+      if (e.target === _.menuCnt) {
+        if (fade) {
+          if (e.propertyName === 'opacity') {
+            transitionEndEvents();
+          }
+        } else {
+          if (e.propertyName === 'transform') {
+            transitionEndEvents();
+          }
         }
-      } else {
-        if (e.propertyName === 'transform') {
-          transitionEndEvents();
-        }
-      } 
-      allowSwipe = true;
+        allowSwipe = true;
+      }
     },
     transitionEndEvents = function() {
       if (opened) {
@@ -142,8 +149,7 @@ mobileMenu = function(_) {
         if (!allowPageScroll) {
           pageScroll(false);
         }
-        console.log('sticky hdr');
-        sticky(hdr);
+        // sticky(hdr);
       } else {
         menu.isOpened = opened = true;
         openBtn.removeEventListener('click', openMenu);
@@ -151,10 +157,10 @@ mobileMenu = function(_) {
       }
     },
     init = function() {
-      menu = checkForString(_.menu);
-      menuCnt = checkForString(_.menuCnt);
-      openBtn = checkForString(_.openBtn);
-      closeBtn = checkForString(_.closeBtn);
+      menu = checkString(_.menu);
+      menuCnt = checkString(_.menuCnt);
+      openBtn = checkString(_.openBtn);
+      closeBtn = checkString(_.closeBtn);
       allowPageScroll = options.allowPageScroll;
       toRight = options.toRight;
       toLeft = options.toLeft;
@@ -178,6 +184,7 @@ mobileMenu = function(_) {
       document[action + 'EventListener']('keyup', closeMenu);
     },
     destroy = function() {
+      console.log('destroy');
       if (opened) {
         closeMenu();
       }
@@ -282,7 +289,8 @@ mobileMenu = function(_) {
       open: openMenu,
       close: closeMenu,
       destroy: destroy,
-      opened: opened
+      opened: opened,
+      transitionEndEvents: transitionEndEvents
     };
   }
 };

@@ -3,7 +3,9 @@
 @import '../../scss/assets/variables';
 
 .index-principles {
-  &__title {}
+  &__title {
+    max-width: 100%;
+  }
 }
 
 .index-principles-list {

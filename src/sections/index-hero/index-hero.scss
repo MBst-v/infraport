@@ -4,8 +4,8 @@
 
 .index-hero {
   margin-bottom: $sectionVerticalPadding320;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  padding-top: 45px;
+  padding-bottom: 55px;
   position: relative;
 
   $hdr_height: 80.25px;
@@ -29,11 +29,14 @@
   }
 
   &__descr {
-    margin: 18px 0 195px;
+    margin: 12px 0 208px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
   }
 
   &__btn {
     max-width: 100%;
-    padding: 16px 82px;
+    width: 100%;
+    padding: 18px 82px 16px;
   }
 }

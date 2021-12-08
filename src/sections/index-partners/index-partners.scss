@@ -22,9 +22,9 @@
 }
 
 .index-partner {
-  pointer-events: none;
+  // pointer-events: none;
   margin: 20px 0 0;
-  padding: 25px 40px;
+  // padding: 25px 40px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -32,7 +32,7 @@
   background: $white;
 
   &__pic {
-    max-width: 170px;
+    // max-width: 170px;
     display: block;
   }
 

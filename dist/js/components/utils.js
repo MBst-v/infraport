@@ -147,6 +147,10 @@ var browser = {
 
         if (r != wndwY + targetTop) {
           requestAnimationFrame(step);
+        } else {
+          // menu.transitionEndEvents();
+          // pageScroll(false);
+          // console.log(menu);
         }
       }
 
