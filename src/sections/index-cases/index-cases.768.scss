@@ -33,7 +33,9 @@
 .index-case {
   &__pic {}
 
-  &__img {}
+  &__img {
+    height: 260px;
+  }
 
   &__title {
     margin: 20px 0 0;

@@ -105,5 +105,6 @@ if ( is_super_admin() || is_admin_bar_showing() ) {
 	// Удаление лишних пунктов из меню админ-панели и прочие настройки админ-панели
 	require $template_directory . '/inc/admin-menu-actions.php';
 
-
+	// Создание колонок в админке
+	require $template_directory . '/inc/post-columns.php';
 }

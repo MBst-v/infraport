@@ -16,6 +16,7 @@
     $services = get_posts( [
       'post_type' => 'service',
       'numberposts' => -1,
+      'order' => 'ASC',
       'tax_query' => [
         [
           'taxonomy' => 'service_category',
@@ -23,7 +24,6 @@
         ]
       ]
     ] );
-    $services = array_merge( $services, $services, $services );
     $services_html .= "<div class=\"index-competencies-block{$active_class}\" data-page=\"1\" data-term=\"{$service_term->name}\">";
     $k = 1;
     foreach ( $services as $service ) {
@@ -36,12 +36,16 @@
       $services_html .= '<img src="#" alt="Arrow icon" data-src="' . $images_url . 'icon-service-arrow.svg" class="index-competence__arrow lazy"></a>';
       $k++;
     } // endforeach ( $services as $service )
-    $services_html .= '<div class="index-competencies-pagination pagination">';
-    for ( $j = 0, $len = ceil( count( $services ) / $services_on_page ); $j < $len; $j++ ) {
-      $active_class = $j === 0 ? ' active' : '';
-      $services_html .= '<button type="button" class="index-competencies-pagination-number pagination-number' . $active_class . '">' . ($j + 1) . '</button>';
+    $len = ceil( count( $services ) / $services_on_page );
+    if ( $len > 1 ) {
+      $services_html .= '<div class="index-competencies-pagination pagination">';
+      for ( $j = 0; $j < $len; $j++ ) {
+        $active_class = $j === 0 ? ' active' : '';
+        $services_html .= '<button type="button" class="index-competencies-pagination-number pagination-number' . $active_class . '">' . ($j + 1) . '</button>';
+      }
+      $services_html .= '</div>';
     }
-    $services_html .= '</div></div>';
+    $services_html .= '</div>';
     $i++;
   } // endforeach ( $service_terms as $service_term ) ?>
   <div class="sect-left">

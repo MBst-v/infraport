@@ -133,9 +133,10 @@ var browser = {
 
     let wndwY = window.pageYOffset,
       targetStyles = getComputedStyle(target),
-      targetTop = target.getBoundingClientRect().top - +(targetStyles.paddingTop).slice(0, -2) - +(targetStyles.marginTop).slice(0, -2),
+      // targetTop = target.getBoundingClientRect().top - +(targetStyles.paddingTop).slice(0, -2) - +(targetStyles.marginTop).slice(0, -2),
+      targetTop = target.getBoundingClientRect().top,
       start = null,
-      V = .35,
+      V = targetTop > 3000 ? 0.15 : 0.35,
       step = function(time) {
         if (start === null) {
           start = time;
@@ -152,7 +153,9 @@ var browser = {
           // pageScroll(false);
           // console.log(menu);
         }
-      }
+      };
+
+    console.log(targetTop);
 
     requestAnimationFrame(step);
   },

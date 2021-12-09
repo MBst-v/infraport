@@ -35,7 +35,11 @@
     display: block;
   }
 
-  &__img {}
+  &__img {
+    display: block;
+    height: responsive('320->575', '328->446');
+    object-fit: cover;
+  }
 
   &__title {
     margin: 15px 0 0;

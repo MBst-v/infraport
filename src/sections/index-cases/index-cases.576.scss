@@ -11,7 +11,7 @@
 .index-cases-list {
   overflow: hidden;
   >.slick-list {
-    // margin: 0 -20px 0 0;
+    margin: 0 -20px 0 0;
     width: calc(100% + 20px);
   }
 }
@@ -23,7 +23,9 @@
 
   &__pic {}
 
-  &__img {}
+  &__img {
+    height: 302px;
+  }
 
   &__title {}
 }

@@ -72,9 +72,9 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
 
       &::after {
         content: '';
-        margin: 3px 0 0 2px;
-        height: 7px;
-        width: 11px;
+        margin: 3px 0 0 3px;
+        height: 6px;
+        width: 10px;
         border-left: 1px solid $white;
         border-bottom: 1px solid $white;
         transform: rotate(-45deg);
