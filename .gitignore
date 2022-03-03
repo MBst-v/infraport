@@ -4,7 +4,7 @@
 # scripts
 .jshintrc
 *.txt
-scripts/
+scripts/libs/
 
 .babelrc
 .browserslistrc
