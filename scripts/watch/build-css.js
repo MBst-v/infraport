@@ -6,6 +6,7 @@ var { src, dest } = require('gulp'),
   include = require('gulp-include'),
   // sass = require('gulp-sass')(require('sass')),
   sass = require('gulp-sass'),
+  gcmq = require('gulp-group-css-media-queries'),
   autoprefixer = require('gulp-autoprefixer'),
   flatten = require('gulp-flatten'),
   tap = require('gulp-tap'),
@@ -80,6 +81,7 @@ var { src, dest } = require('gulp'),
       // Файл темы вордпресс
       src(path.join(config.src.path, 'style.scss'))
         // .pipe(sass().on('error', sass.logError))
+        .pipe(gcmq())
         .pipe(sass({
           errorLogToConsole: true,
           outputStyle: 'expanded'

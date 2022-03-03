@@ -17,8 +17,8 @@
       <a href="<?php the_permalink( $case->ID ) ?>" class="index-case">
         <picture class="index-case__pic lazy">
           <img src="#" alt="<?php echo $case->post_title ?>" class="index-case__img" data-src="<?php echo get_the_post_thumbnail_url( $case->ID ) ?>">
-          <span class="index-case__title"><?php echo $case->post_title ?></span>
         </picture>
+        <span class="index-case__title"><?php echo $case->post_title ?></span>
       </a> <?php
     endforeach ?>
     <div class="index-cases-list__nav"></div>
