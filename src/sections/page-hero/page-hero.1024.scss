@@ -1,0 +1,9 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.page-hero {
+  &__title {
+    font-size: 80px;
+  }
+}

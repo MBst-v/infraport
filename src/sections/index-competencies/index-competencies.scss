@@ -91,7 +91,7 @@
   }
 
   &-tabs {
-    font: 12px/1 $rubik;
+    font: 12px/1 $mainFont;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $dirtyBlue;
@@ -172,7 +172,7 @@
   // }
 
   &__title {
-    font: 13px/1.45 $rubik;
+    font: 13px/1.45 $mainFont;
     color: $accentBlue;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -182,7 +182,7 @@
   &__descr {
     // margin: 15px 0 50px;
     margin: 15px 0 0;
-    font: 12px/1.45 $openSans;
+    font: 12px/1.45 $secondFont;
   }
 
   &__arrow {

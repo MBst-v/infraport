@@ -8,7 +8,7 @@
     padding: 40px 20px 30px;
     background: $accentBlue;
     color: $gray1;
-    font: 300 12px/1.4 $openSans;
+    font: 300 12px/1.4 $secondFont;
   }
   > .sect-right {
     padding: 40px 20px 60px;
@@ -56,7 +56,7 @@
   &__nav {
     margin: 40px 0 0 0;
     padding: 10px 0 0;
-    font: 12px/1 $rubik;
+    font: 12px/1 $mainFont;
     text-transform: uppercase;
     border-top: 1px solid $gray3;
   }
