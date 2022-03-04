@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //   allowPageScroll: false
   // });
 
-  let navLinks = qa('.nav-link', hdr, '.ftr .nav-link');
+  let navLinks = qa('.nav-link[href^="#"]', hdr, '.ftr .nav-link[href=^"#"]');
 
   for (let i = 0, len = navLinks.length; i < len; i++) {
     navLinks[i].addEventListener('click', scrollToTarget);

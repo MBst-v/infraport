@@ -11,7 +11,7 @@ const USER_SERV_DEST = '/Applications/MAMP/htdocs/',
 // const USER_SERV_DEST = 'test',
           SITE_NAME = 'infraport',
           // PC_USERNAME = 'vadim';
-          PC_USERNAME = 'administrator';
+          PC_USERNAME = 'Vadim';
 
 const paths = {
   localServer: path.join(USER_SERV_DEST, SITE_NAME),

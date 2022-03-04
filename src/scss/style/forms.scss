@@ -38,7 +38,7 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
     align-items: flex-start;
     max-width: 265px;
     flex-wrap: wrap;
-    font: 12px/140% $openSans;
+    font: 12px/140% $secondFont;
 
     >.check__text {
       width: $checkbox_text_width;
@@ -154,7 +154,7 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
   height: 45px;
   border: 1px dashed #C5C3C6;
   color: $dirtyBlue;
-  font: 10px/1 $openSans;
+  font: 10px/1 $secondFont;
   cursor: pointer;
   transition: color .5s, border-color .5s;
 
@@ -190,7 +190,7 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
 .field {
   width: 100%;
   display: inline-flex;
-  font: 12px/1.4 $openSans;
+  font: 12px/1.4 $secondFont;
   position: relative;
   color: $dirtyBlue;
   border: 1px solid #C5C3C6;
@@ -212,7 +212,7 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
     // &:focus,
     // &.filled {
     // &:focus.valid,
-    // &.filled.valid { 
+    // &.filled.valid {
     // border-bottom-color: $black;
 
     // ~.field__text {
@@ -260,7 +260,7 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
 .dnd-upload-status .dnd-upload-details span.has-error {
   margin: 12px 0 0;
   color: $red;
-  font: 12px/1.4 $openSans;
+  font: 12px/1.4 $secondFont;
   display: block;
 }
 
@@ -282,13 +282,13 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
 .dnd-upload-status .dnd-upload-details .name span {
   max-width: 150px;
   color: $dirtyBlue;
-  font: 12px/1 $openSans;
+  font: 12px/1 $secondFont;
 }
 
 // Текст размера файла
 .dnd-upload-status .dnd-upload-details .name em {
   color: $gray3;
-  font: 12px/1 $openSans;
+  font: 12px/1 $secondFont;
 }
 
 // Полоса прогресса (без фона, блок-обертка)
