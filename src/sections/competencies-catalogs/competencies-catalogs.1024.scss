@@ -1,0 +1,37 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.comp-catalogs {
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    max-width: 500px;
+  }
+}
+
+.catalogs {
+  margin-top: 50px;
+}
+
+.catalog {
+  &__link {
+    transition: background .3s;
+
+    &:hover {
+      background-color: $white;
+
+      .catalog__dl-icon {
+        path {
+          stroke: $accentBlue;
+        }
+      }
+    }
+  }
+
+  &__dl-icon {
+    path {
+      transition: stroke .3s;
+    }
+  }
+}

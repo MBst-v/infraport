@@ -1,0 +1,21 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.contacts-hero {
+  &__tel {
+    transition: color .25s;
+
+    &:hover {
+      color: $accentBlue;
+    }
+  }
+
+  &__info {
+    margin: 30px 0;
+  }
+
+  &__map {
+    height: 320px;
+  }
+}

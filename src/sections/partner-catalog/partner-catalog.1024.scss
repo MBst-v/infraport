@@ -1,0 +1,9 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.partner-catalog {
+  &__text {
+    max-width: 500px;
+  }
+}

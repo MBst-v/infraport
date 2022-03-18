@@ -1,0 +1,38 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.filter {
+  margin: 45px 0 60px;
+
+  &__item {
+    transition: color .25s;
+
+    &:hover {
+      color: $accentBlue;
+    }
+  }
+
+  &__inner {
+    max-width: 385px;
+    width: 100%;
+  }
+}
+
+.partner {
+  padding: 30px 80px 40px 0;
+
+  &::after {
+    transition: transform .2s;
+  }
+
+  &:hover {
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &__descr {
+    max-width: 555px;
+  }
+}

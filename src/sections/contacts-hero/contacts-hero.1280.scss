@@ -1,0 +1,13 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.contacts-hero {
+  &__title {
+    font-size: 24px;
+  }
+
+  &__map {
+    height: 400px;
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.comp-catalogs {
+  &__title {
+    max-width: 560px;
+  }
+}
+
+.catalog {
+  height: 160px;
+}

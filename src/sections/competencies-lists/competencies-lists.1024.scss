@@ -1,3 +1,38 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.service {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &.mt {
+    margin-top: 60px;
+  }
+
+  &__pic {
+    width: 465px;
+    min-height: 285px;
+    margin-right: 30px;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+}
+
+.filter {
+
+  &__item {
+    transition: color .25s;
+
+    &:hover {
+      color: $accentBlue;
+    }
+  }
+
+  &__inner {
+    max-width: 465px;
+    width: 100%;
+  }
+}

@@ -27,6 +27,13 @@
 
   &__copy {}
 
+  &__dev {
+    &-img {
+      width: 96px;
+      height: 18px;
+    }
+  }
+
   &__contacts {
     max-width: 270px;
     flex-flow: column;

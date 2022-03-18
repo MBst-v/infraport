@@ -1,0 +1,21 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.partner-catalog {
+  &.lazyloaded {
+    background-image: url('../img/index-about-bg.svg');
+    background-repeat: no-repeat;
+    background-position: top right -110px;
+    background-size: auto 100%;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+
+  &__file {
+    max-width: 250px;
+  }
+}

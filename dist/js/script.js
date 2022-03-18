@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
         /*
           Функция получения значения полей у текущей формы.
           Ищет только те элементы формы, именя которых указаны в rules.
-          Возвращает объект: 
+          Возвращает объект:
           {название-поля: значение-поля}
           Например:
           {'user-email': 'mail@mail.ru'}
@@ -506,7 +506,7 @@ document.addEventListener('DOMContentLoaded', function() {
         formValidator({
           form: $forms[i],
           formBtn: q('.btn', $forms[i]) || q('.btn[form="' + $forms[i].id + '"]'),
-          uploadFilesBlock: q('.uploadedfiles', $forms[i]),
+          uploadFilesBlock: q('.dnd-upload-details', $forms[i]),
           filesInput: q('input[type="file"]', $forms[i])
         });
       }
@@ -874,6 +874,18 @@ document.addEventListener('DOMContentLoaded', function() {
         windowFuncs.call(funcsArray);
         window.addEventListener(eventType, windowFuncs.call);
       }
+    }
+  }
+
+  const pageTemplates = {
+    'single-partner': 'nav-partner',
+    'single-case': 'nav-case'
+  }
+
+  for (const key in  pageTemplates) {
+    if (document.body.classList.contains(key)) {
+      const menuItem = q('.' + pageTemplates[key])
+      menuItem.classList.add('current')
     }
   }
 

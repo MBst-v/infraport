@@ -1,3 +1,21 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.partner-hero {
+  .sect-title-2 {
+    font-size: 44px;
+  }
+}
+
+.partner-descr {
+  &__pic {
+    padding-bottom: 0;
+    height: 230px;
+  }
+
+  &__title {
+    max-width: 315px;
+    margin: 40px 0 40px auto;
+  }
+}

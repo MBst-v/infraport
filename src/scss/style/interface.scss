@@ -2,12 +2,33 @@
 @import '../assets/mixins';
 @import '../assets/variables';
 
+* {
+  &:focus,
+  &:focus-visible,
+  &:active
+  &:hover {
+    outline: 0 !important;
+  }
+}
 // Класс добавляется при вызове попапов и мобильного меню
 body.no-scroll {
   overflow: hidden;
 
   .hdr.fixed {
     overflow-y: scroll;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -250,6 +271,7 @@ body {
 
   .sect-title-text {
     background: $white;
+    display: inline-block;
   }
 
   &-bg {
@@ -260,7 +282,8 @@ body {
     background: $gray2;
 
     .sect-title-text {
-      background: $gray2;
+      background: $gray2 !important;
+      display: inline-block;
     }
   }
 
@@ -271,6 +294,7 @@ body {
   }
 
   &-title-2 {
+    margin-top: -10px;
     font: 500 24px/1.3 $mainFont;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -313,6 +337,8 @@ body {
       padding: 0 15px 0 0;
       position: relative;
       z-index: 1;
+      display: inline-block;
+      background-color: $white;
     }
   }
 

@@ -7,14 +7,17 @@
           $address_link,
           $logo_url,
           $site_url,
-          $template_directory_uri ?>
+          $template_directory_uri; ?>
       <footer class="ftr">
         <div class="sect-left">
           <a href="<?php echo $site_url ?>" class="ftr__logo">
             <img src="<?php echo $logo_url ?>" alt="Логотип Infraport" class="ftr__logo-img">
           </a>
           <p class="ftr__descr">Центр разработки <br>и интеграции светотехнических <br>и электротехнических решений</p>
-          <p class="ftr__copy">&copy;&nbsp;<?php echo date( 'Y' ) ?>&nbsp;Infraport</p>
+          <!-- <p class="ftr__copy">&copy;&nbsp;<?php // echo date( 'Y' ) ?>&nbsp;Infraport</p> -->
+          <p class="ftr__dev">
+            Разработка - <a href="https://media-bay.ru/" target="_blank" aria-label="Сайт студии медиа-гавань" class="ftr__dev-link"><img src="<?= $template_directory_uri ?>/img/mb-dev.svg" alt="media bay logo" class="ftr__dev-img"></a>
+          </p>
         </div>
         <div class="sect-right">
           <div class="ftr__contacts">
@@ -28,9 +31,9 @@
             </div>
             <div class="ftr__contact">
               <span class="ftr__contact-title">Адрес</span>
-              <a href="<?php echo $address_link ?>" class="ftr__contact-link"><?php echo $address ?></a>
+              <a href="<?php echo $address_link ?>" class="ftr__contact-link" target="_blank"><?php echo $address ?></a>
             </div>
-          </div> <?php 
+          </div> <?php
           wp_nav_menu( [
             'theme_location'  => 'header_menu',
             'container'       => 'nav',

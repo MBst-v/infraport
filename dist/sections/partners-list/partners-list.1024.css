@@ -1,0 +1,1 @@
+@charset "UTF-8";.filter{margin:45px 0 60px}.filter__item{transition:color .25s}.filter__item:hover{color:#4774c8}.filter__inner{max-width:385px;width:100%}.partner{padding:30px 80px 40px 0}.partner::after{transition:transform .2s}.partner:hover::after{transform:translateY(-50%) rotate(45deg)}.partner__descr{max-width:555px}

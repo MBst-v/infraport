@@ -28,7 +28,7 @@
 }
 
 .index-case {
-  pointer-events: none;
+  // pointer-events: none;
   display: block;
 
   &__pic {
@@ -36,6 +36,7 @@
   }
 
   &__img {
+    width: 100%;
     display: block;
     height: responsive('320->575', '328->446');
     object-fit: cover;

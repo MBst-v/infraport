@@ -1,0 +1,35 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.sect-404 {
+  margin-bottom: 0;
+  background-image: url('../img/index-about-bg.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font: 500 110px/130% $mainFont;
+    letter-spacing: .02em;
+  }
+
+  h1 {
+    max-width: 550px;
+    color: $dirtyBlue;
+    text-align: center;
+    margin: 32px 0 120px;
+    font-size: 14px;
+  }
+
+  &__home {
+    max-width: 300px;
+    width: 100%;
+    padding: 18px 40px;
+    text-align: center;
+  }
+}

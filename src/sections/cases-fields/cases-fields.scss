@@ -1,3 +1,158 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.cases {
+  &__list-wrapper {
+    .pagination {
+      justify-content: flex-end;
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+}
+
+.filter {
+  margin: 20px 0 0;
+
+  &.open {
+    .filter {
+      &__curr {
+        &::after {
+          transform: translateX(-50%) rotate(-180deg);
+        }
+      }
+
+      &__list {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    color: $dirtyBlue;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__inner {
+    font: 12px/135% $secondFont;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__curr,
+  &__list {
+    border: 1px solid $gray3;
+    background-color: $white;
+  }
+
+  &__curr {
+    padding: 15px 48px 15px 15px;
+    position: relative;
+
+    &::before {
+      content: attr(data-curr-filter-text);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 8px;
+      top: 45%;
+      right: 20px;
+      transform: translateX(-50%);
+      background: url('../img/arrow-down.svg') no-repeat center/contain;
+      transition: transform .25s;
+    }
+
+  }
+
+  &__list {
+    padding: 2px 15px;
+    display: flex;
+    flex-flow: column;
+    background-color: $white;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .25s, opacity .25s;
+    z-index: 2;
+  }
+
+  &__item {
+    border-top: 1px solid $gray3;
+    padding: 18px 0;
+    text-align-last: left;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &.active {
+      color: $accentBlue;
+      pointer-events: none;
+    }
+  }
+}
+
+.case {
+  display: flex;
+  flex-flow: column;
+  margin-top: 40px;
+
+  &__pic {
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__list {
+    display: none;
+  }
+
+  &__title {
+    margin: 20px 0 15px;
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+
+  &__learn-more {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: 6px;
+      width: 16px;
+      height: 16px;
+      background: url('../img/icon-service-arrow.svg') no-repeat center/contain;
+    }
+  }
+}

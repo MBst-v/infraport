@@ -1,0 +1,41 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.vacancies {
+  &__descr {
+    margin: 40px 0 67px;
+  }
+}
+
+.vacancy {
+  padding: 30px 80px 30px 30px;
+  height: 150px;
+
+  &__cross {
+    bottom: 25px;
+    right: 25px;
+  }
+
+  &__title {
+    font-size: 20px;
+  }
+}
+
+.vacancy-popup {
+
+  &__inner {
+    max-width: 605px;
+    padding: 100px 135px 210px 70px;
+  }
+
+  &__close {
+    width: 55px;
+    height: 55px;
+
+    &::before,
+    &::after {
+      width: 30px;
+    }
+  }
+}

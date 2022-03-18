@@ -1,3 +1,151 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.competencies {
+  margin-top: 15px;
+}
+
+.service {
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $white;
+
+  &.mt {
+    margin-top: 50px;
+  }
+
+  &.pb {
+    padding-bottom: 0;
+  }
+
+  &:nth-last-child(2n) {
+    background-color: $gray2;
+  }
+
+  &__pic {
+    display: block;
+    position: relative;
+    padding-bottom: 60%;
+    margin-bottom: 28px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font: 17px/135% $mainFont;
+    letter-spacing: .03em;
+    margin-bottom: 18px;
+  }
+
+  &__partner {
+    margin-top: 28px;
+    display: block;
+
+    &-img {
+      max-width: 130px;
+      margin-bottom: 20px;
+      min-height: 20px;
+      max-height: 35px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.filter {
+
+  &.open {
+    .filter {
+      &__curr {
+        &::after {
+          transform: translateX(-50%) rotate(-180deg);
+        }
+      }
+
+      &__list {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    color: $dirtyBlue;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__inner {
+    font: 12px/135% $secondFont;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__curr,
+  &__list {
+    border: 1px solid $gray3;
+    background-color: $white;
+  }
+
+  &__curr {
+    padding: 15px 48px 15px 15px;
+    position: relative;
+
+    &::before {
+      content: attr(data-curr-filter-text);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 8px;
+      top: 45%;
+      right: 20px;
+      transform: translateX(-50%);
+      background: url('../img/arrow-down.svg') no-repeat center/contain;
+      transition: transform .25s;
+    }
+
+  }
+
+  &__list {
+    padding: 2px 15px;
+    display: flex;
+    flex-flow: column;
+    background-color: $white;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .25s, opacity .25s;
+    z-index: 1;
+  }
+
+  &__item {
+    border-top: 1px solid $gray3;
+    padding: 18px 0;
+    text-align-last: left;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &.active {
+      color: $accentBlue;
+      pointer-events: none;
+    }
+  }
+}

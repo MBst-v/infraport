@@ -1,0 +1,37 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.comp-catalogs {
+  &__block {
+    display: flex;
+    align-items: flex-end;
+  }
+  &__title {
+    max-width: 345px;
+  }
+}
+
+.catalog-slider {
+  &__nav {
+    display: flex;
+    margin-left: auto;
+
+    .arrow-prev {
+      margin-right: 14px;
+    }
+  }
+}
+
+.catalog {
+  height: 140px;
+
+  &__link {
+    padding: 30px 20px 40px;
+  }
+
+  &__dl-icon {
+    width: 22px;
+    height: 20px;
+  }
+}

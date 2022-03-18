@@ -76,6 +76,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  const pageTemplates = {
+    'single-partner': 'nav-partner',
+    'single-case': 'nav-case'
+  }
+
+  for (const key in  pageTemplates) {
+    if (document.body.classList.contains(key)) {
+      const menuItem = q('.' + pageTemplates[key])
+      menuItem.classList.add('current')
+    }
+  }
+
   // настройки grab курсора на всех слайдерах
   // let slickLists = $('.slick-list.draggable');
 

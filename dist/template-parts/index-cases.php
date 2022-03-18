@@ -1,4 +1,9 @@
-<section class="index-cases container sect-bg"<?php echo $sect_id ?>>
+<?php
+  $bg_color = $section['bg_color'] !== '' ? $section['bg_color'] : 'd';
+  $sect_class = $bg_color === 'w' ? ' sect' : ' sect-bg';
+?>
+
+<section class="index-cases container<?= $sect_class ?>"<?php echo $sect_id ?>>
   <div class="index-cases__title-block">
     <h2 class="index-cases__title sect-title-5"><span class="sect-title-text"><?php echo $section['title'] ?></span></h2>
     <div class="index-cases__arrows"></div>
@@ -12,7 +17,6 @@
         'numberposts' => $section['numberposts']
       ] );
     }
-    $cases = array_merge( $cases, $cases, $cases, $cases );
     foreach ( $cases as $case ) : ?>
       <a href="<?php the_permalink( $case->ID ) ?>" class="index-case">
         <picture class="index-case__pic lazy">

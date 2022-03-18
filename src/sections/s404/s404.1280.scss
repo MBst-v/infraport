@@ -1,0 +1,14 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.sect-404 {
+  p {
+    font-size: 190px;
+  }
+
+  h1 {
+    margin: 34px 0 90px;
+    font-size: 18px;
+  }
+}

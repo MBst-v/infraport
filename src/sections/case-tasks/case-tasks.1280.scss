@@ -1,0 +1,9 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.case-tasks {
+  &__item {
+    padding: 40px 55px 40px 75px;
+  }
+}

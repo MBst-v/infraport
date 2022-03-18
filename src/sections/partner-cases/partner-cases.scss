@@ -1,0 +1,47 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.partner-cases {
+  margin-top: $sectionVerticalPadding320;
+  margin-bottom: $sectionVerticalPadding320;
+
+  &__arrows {
+    display: none;
+  }
+}
+
+.partner-cases-list {
+  display: flex;
+  flex-flow: column;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font: 17px/1.45 $mainFont;
+  >.slick-list {
+    overflow: hidden;
+  }
+  &__nav {
+    margin: 30px 0 0;
+    order: 10;
+  }
+}
+
+.partner-case {
+  // pointer-events: none;
+  display: block;
+
+  &__pic {
+    display: block;
+  }
+
+  &__img {
+    display: block;
+    height: responsive('320->575', '328->446');
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 15px 0 0;
+    display: block;
+  }
+}

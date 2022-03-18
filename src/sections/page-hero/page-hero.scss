@@ -3,9 +3,11 @@
 @import '../../scss/assets/variables';
 
 .page-hero {
+  margin-bottom: 20px;
+
   &__title {
     text-transform: uppercase;
-    font: 500 34px/140% $mainFont;
+    font: 500 34px/1 $mainFont;
     letter-spacing: 0.03em;
   }
 }

@@ -1,0 +1,16 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.case-hero {
+
+  &__descr {
+    margin-top: 25px;
+    font-size: 18px;
+  }
+
+  &__pic {
+    margin-top: 65px;
+    height: 425px;
+  }
+}

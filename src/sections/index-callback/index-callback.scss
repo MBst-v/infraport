@@ -77,3 +77,13 @@
     width: 100%;
   }
 }
+
+.sect-bg {
+  .index-callback-form {
+    .field {
+      &__text {
+        background-color: $white;
+      }
+    }
+  }
+}

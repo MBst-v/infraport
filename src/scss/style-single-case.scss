@@ -1,4 +1,15 @@
-
 @import 'assets/colors';
 @import 'assets/mixins';
 @import 'assets/variables';
+@import '../sections/header/header';
+@import '../sections/mobile-menu/mobile-menu';
+@import '../sections/case-hero/case-hero';
+@import '../sections/case-tasks/case-tasks';
+@import '../sections/case-equip/case-equip';
+@import '../sections/case-feature/case-feature';
+@import '../sections/case-gallery/case-gallery';
+@import '../sections/case-review/case-review';
+@import '../sections/case-others/case-others';
+@import '../sections/index-cases/index-cases';
+@import '../sections/index-callback/index-callback';
+@import '../sections/footer/footer';

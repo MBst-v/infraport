@@ -1,3 +1,28 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.results {
+  margin-top: 40px;
+
+  &__item {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-num {
+      font: 500 38px/135% $mainFont;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $gray3;
+    }
+
+    &-name {
+      margin-top: 8px;
+      color: $dirtyBlue;
+    }
+  }
+}

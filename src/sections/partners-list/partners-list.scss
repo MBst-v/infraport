@@ -1,0 +1,130 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.partners {
+  &__list-wrapper {
+    .pagination {
+      justify-content: flex-end;
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+    border-top: 1px solid $gray3;
+  }
+}
+
+.filter {
+  margin: 20px 0 40px;
+
+  &.open {
+    .filter {
+      &__curr {
+        &::after {
+          transform: translateX(-50%) rotate(-180deg);
+        }
+      }
+
+      &__list {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    color: $dirtyBlue;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__inner {
+    font: 12px/135% $secondFont;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__curr,
+  &__list {
+    border: 1px solid $gray3;
+    background-color: $white;
+  }
+
+  &__curr {
+    padding: 15px 48px 15px 15px;
+    position: relative;
+
+    &::before {
+      content: attr(data-curr-filter-text);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 8px;
+      top: 45%;
+      right: 20px;
+      transform: translateX(-50%);
+      background: url('../img/arrow-down.svg') no-repeat center/contain;
+      transition: transform .25s;
+    }
+
+  }
+
+  &__list {
+    padding: 2px 15px;
+    display: flex;
+    flex-flow: column;
+    background-color: $white;
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .25s, opacity .25s;
+    z-index: 1;
+  }
+
+  &__item {
+    border-top: 1px solid $gray3;
+    padding: 18px 0;
+    text-align-last: left;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &.active {
+      color: $accentBlue;
+      pointer-events: none;
+    }
+  }
+}
+
+.partner {
+  display: block;
+  padding: 20px 0 65px;
+  border-bottom: 1px solid $gray3;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: url('../img/icon-service-arrow.svg') no-repeat center/contain;
+  }
+
+  &__img {
+    max-width: 180px;
+    margin-bottom: 20px;
+    min-height: 20px;
+    max-height: 35px;
+    object-fit: contain;
+  }
+}
