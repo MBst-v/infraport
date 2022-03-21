@@ -1,0 +1,9 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.review {
+  &__quote {
+    padding: 0 0 40px 100px;
+  }
+}

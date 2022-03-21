@@ -1,0 +1,40 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.review {
+  &__quote {
+    margin: 0 0 24px;
+    position: relative;
+    padding: 0 0 24px 40px;
+    border-bottom: 1px solid $gray3;
+
+    &::before {
+      content: '“';
+      position: absolute;
+      top: -5px;
+      left: 0;
+      color: $accentBlue;
+      font: 70px/1 $mainFont;
+      letter-spacing: .03em;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-flow: column;
+    text-align: right;
+
+    &-name {
+      font: 13px/135% $mainFont;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin-bottom: 5px;
+    }
+
+    &-position {
+      font-size: 12px;
+      color: $dirtyBlue;
+    }
+  }
+}

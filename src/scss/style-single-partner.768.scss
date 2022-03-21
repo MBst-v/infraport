@@ -1,4 +1,11 @@
-
 @import 'assets/colors';
 @import 'assets/mixins';
 @import 'assets/variables';
+@import '../sections/header/header.768';
+@import '../sections/mobile-menu/mobile-menu.768';
+@import '../sections/partner-descr/partner-descr.768';
+@import '../sections/partner-equipment/partner-equipment.768';
+@import '../sections/partner-cases/partner-cases.768';
+@import '../sections/partner-catalog/partner-catalog.768';
+@import '../sections/index-callback/index-callback.768';
+@import '../sections/footer/footer.768';

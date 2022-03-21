@@ -1,0 +1,13 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.case-tasks {
+  &__list {
+    margin-top: 55px;
+    font-size: 18px;
+  }
+  &__item {
+    padding: 35px 50px 35px 70px;
+  }
+}

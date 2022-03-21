@@ -56,11 +56,25 @@
       display: flex;
       flex-flow: column;
       align-items: flex-start;
-      font: 500 19px/1.4 $mainFont;
+      font: 400 19px/1.4 $mainFont;
       text-transform: uppercase;
     }
     &-li {
       margin: 0 0 30px;
+
+      &.current {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 80%;
+          height: 2px;
+          background-color: $white;
+        }
+      }
     }
   }
 

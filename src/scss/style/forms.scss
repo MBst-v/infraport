@@ -282,7 +282,7 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
 .dnd-upload-status .dnd-upload-details .name span {
   max-width: 150px;
   color: $dirtyBlue;
-  font: 12px/1 $secondFont;
+  font: 12px/1.2 $secondFont;
 }
 
 // Текст размера файла
@@ -306,6 +306,10 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
   background: $accentBlue;
 }
 
+.dnd-upload-status.complete .dnd-upload-details .dnd-progress-bar {
+  opacity: 0;
+}
+
 // Кнопка удаления файла
 .dnd-upload-status .dnd-upload-details .remove-file {
   width: 10px;
@@ -313,6 +317,15 @@ $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
   position: relative;
   top: auto;
   right: auto;
+
+  .dnd-icon-remove {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
 
   &::before,
   &::after {

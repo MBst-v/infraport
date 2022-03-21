@@ -1,3 +1,16 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.results {
+  display: flex;
+  flex-flow: row wrap;
+
+  &__item {
+    width: calc(50% - 10px);
+
+    &:nth-child(even) {
+      margin-left: 20px;
+    }
+  }
+}

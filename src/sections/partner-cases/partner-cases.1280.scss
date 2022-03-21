@@ -1,0 +1,15 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.partner-cases {
+  margin-top: $sectionVerticalPadding1280;
+  margin-bottom: $sectionVerticalPadding1280;
+}
+
+.partner-case {
+
+  &__img {
+    height: 446px;
+  }
+}

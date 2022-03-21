@@ -28,8 +28,9 @@
     $k = 1;
     foreach ( $services as $service ) {
       $page_attr = 'data-page="' . ceil( $k / $services_on_page ) . '"';
+      $href = home_url() . '/kompetenczii/#' . $service->ID;
       $service_descr = get_field( 'index_descr', $service->ID );
-      $services_html .= "<a href=\"#\" class=\"index-competence\" {$page_attr}><p class=\"index-competence__title\">{$service->post_title}</p>";
+      $services_html .= "<a href=\"{$href}\" class=\"index-competence\" {$page_attr}><p class=\"index-competence__title\">{$service->post_title}</p>";
       if ( $service_descr ) {
         $services_html .= "<p class=\"index-competence__descr\">{$service_descr}</p>";
       } // endif ( $service_descr )

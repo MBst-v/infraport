@@ -1,3 +1,15 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.partner-descr {
+  &__pic {
+    height: 390px;
+  }
+
+  &__title {
+    font-size: 32px;
+    max-width: 515px;
+    margin: 70px 0 50px auto;
+  }
+}

@@ -1,3 +1,55 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.competencies {
+  margin-top: 30px;
+}
+
+.services {
+  margin-top: 10px;
+}
+
+.service {
+  display: flex;
+
+  &__pic {
+    flex-shrink: 0;
+    width: 345px;
+    min-height: 305px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  &__text {
+    margin-bottom: 26px;
+  }
+
+  &__descr {
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__partner {
+    margin-top: auto;
+  }
+}
+
+.filter {
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  &__inner {
+    max-width: 345px;
+    font-size: 16px;
+  }
+}

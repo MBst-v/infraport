@@ -3,7 +3,13 @@
 @import '../../scss/assets/variables';
 
 .page-hero {
+  margin-top: 55px;
+  margin-bottom: 30px;
+
+
   &__title {
     font-size: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #0B0C0C;
   }
 }

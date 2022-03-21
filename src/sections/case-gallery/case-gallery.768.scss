@@ -1,0 +1,58 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.gallery {
+  &__item {
+    opacity: 0;
+    transition: opacity .5s;
+
+    &.slick-active {
+      opacity: 1;
+    }
+
+    &-pic {
+      display: block;
+      position: relative;
+      padding-bottom: 55%;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    color: $gray3;
+    font-size: 20px;
+    margin-bottom: 15px;
+
+    &-line {
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background-color: $gray3;
+      margin: 0 5px;
+    }
+
+    &-curr {
+      color: $black;
+    }
+  }
+
+  &__nav {
+    margin-top: 30px;
+    display: flex;
+  }
+
+  .arrow-prev {
+    margin-right: 24px;
+  }
+}

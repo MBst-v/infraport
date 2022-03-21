@@ -1,3 +1,38 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.service {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &.mt {
+    margin-top: 80px;
+  }
+
+  &__pic {
+    width: 585px;
+    min-height: 350px;
+  }
+
+  &__descr {
+    font-size: 18px;
+  }
+
+  &__text {
+    margin-bottom: 65px;
+  }
+
+  &__partner {
+
+    &-img {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.filter {
+  &__inner {
+    max-width: 585px;
+  }
+}

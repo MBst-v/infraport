@@ -1,0 +1,26 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.partner-cases {
+  margin-top: $sectionVerticalPadding1024;
+  margin-bottom: $sectionVerticalPadding1024;
+}
+
+.partner-cases-list {
+
+  >.slick-list {
+    // margin: 0 -30px 0 0;
+    width: calc(100% + 30px);
+  }
+}
+
+.partner-case {
+  &:not(:last-child) {
+    margin: 0 30px 0 0;
+  }
+
+  &__img {
+    height: 354px;
+  }
+}

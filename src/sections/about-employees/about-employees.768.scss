@@ -1,0 +1,20 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.worker {
+  margin-bottom: 30px;
+  display: flex;
+
+  &__pic {
+    flex-shrink: 0;
+    width: 160px;
+    height: 195px;
+    padding-bottom: 0;
+    margin: 0 20px 0 0;
+  }
+
+  &__descr {
+    margin: 15px 0 20px;
+  }
+}

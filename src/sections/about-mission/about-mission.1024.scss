@@ -1,3 +1,21 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.about-mission {
+  &__descr {
+    font-size: 18px;
+  }
+}
+
+.results {
+  max-width: 600px;
+
+  &__item {
+    width: calc(50% - 25px);
+
+    &:nth-child(even) {
+      margin-left: 50px;
+    }
+  }
+}

@@ -31,6 +31,24 @@
     font-size: 10px;
   }
 
+  &__dev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 5px;
+    }
+
+    &-img {
+      width: 74px;
+      height: 16px;
+    }
+  }
+
   &__contacts {}
 
   &__contact {

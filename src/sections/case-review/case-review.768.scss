@@ -1,0 +1,26 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.review {
+  &__quote {
+    margin: 0 0 20px;
+    padding: 0 0 20px 60px;
+
+    &::before {
+      top: -10px;
+      font-size: 100px;
+    }
+  }
+
+  &__author {
+
+    &-name {
+      font-size: 17px;
+    }
+
+    &-position {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.case-feature {
+  &__descr {
+    margin-top: 24px;
+  }
+}

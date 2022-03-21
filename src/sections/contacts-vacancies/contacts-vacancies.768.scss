@@ -1,0 +1,62 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.vacancies {
+  &__descr {
+    margin: 30px 0 50px;
+  }
+
+  &__list-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+  }
+}
+
+.vacancy {
+  width: calc(50% - 10px);
+
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+}
+
+.vacancy-popup {
+  padding-top: 350px;
+
+  &__inner {
+    padding: 110px 104px 166px 30px;
+  }
+
+  &__close {
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    right: 40px;
+
+    &::before,
+    &::after {
+      width: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 50px;
+    font-weight: 500;
+  }
+
+  &__descr {
+    font-size: 16px;
+
+    b {
+      font-size: 20px;
+    }
+  }
+}

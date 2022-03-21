@@ -1,3 +1,57 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.partner-hero {
+  .sect-title-2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    max-width: 465px;
+  }
+
+  &__all {
+    display: inline-flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      margin: 0 16px 2px 0;
+      width: 10px;
+      height: 14px;
+      background: url('../img/arrow-left-blue.svg') no-repeat center/contain;
+    }
+  }
+}
+
+.partner-descr {
+  &__pic {
+    display: block;
+    width: 100%;
+    padding-bottom: 65%;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    max-width: 260px;
+    margin: 35px 0;
+    font: 22px/140% $secondFont;
+
+    i {
+      color: $accentBlue;
+      font-style: normal;
+    }
+  }
+}

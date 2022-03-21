@@ -57,7 +57,7 @@
       /*
         Функция получения значения полей у текущей формы.
         Ищет только те элементы формы, именя которых указаны в rules.
-        Возвращает объект: 
+        Возвращает объект:
         {название-поля: значение-поля}
         Например:
         {'user-email': 'mail@mail.ru'}
@@ -253,7 +253,7 @@
       formValidator({
         form: $forms[i],
         formBtn: q('.btn', $forms[i]) || q('.btn[form="' + $forms[i].id + '"]'),
-        uploadFilesBlock: q('.uploadedfiles', $forms[i]),
+        uploadFilesBlock: q('.dnd-upload-details', $forms[i]),
         filesInput: q('input[type="file"]', $forms[i])
       });
     }

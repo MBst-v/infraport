@@ -12,7 +12,7 @@
   add_filter( 'nav_menu_link_attributes', function( $atts, $item ) {
     $atts['class'] = 'nav-link';
     return $atts;
-  }, 10, 2);  
+  }, 10, 2);
 
 // задать свои классы для пунктов меню (li)
   add_filter( 'nav_menu_css_class', function( $classes, $item, $args, $depth ) {
@@ -42,6 +42,10 @@
       } else if ( $class === 'last' ) {
         $classesArray[] = 'last';
       }
+
+      if ( str_contains( $class, 'nav')) {
+        $classesArray[] = $class;
+      }
     }
     return $classesArray;
   }, 10, 4);
@@ -50,5 +54,3 @@
   add_filter( 'nav_menu_item_id', function( $menu_id, $item, $args, $depth ) {
     return '';
   }, 10, 4);
-
-  
